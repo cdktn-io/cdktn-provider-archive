@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/archive/2.
 #### Initializers <a name="Initializers" id="@cdktn/provider-archive.provider.ArchiveProvider.Initializer"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-archive-go/archive/v11/provider"
+import "github.com/cdktn-io/cdktn-provider-archive-go/archive/v12/provider"
 
 provider.NewArchiveProvider(scope Construct, id *string, config ArchiveProviderConfig) ArchiveProvider
 ```
@@ -144,14 +144,14 @@ func ResetAlias()
 | <code><a href="#@cdktn/provider-archive.provider.ArchiveProvider.isConstruct">IsConstruct</a></code> | Checks if `x` is a construct. |
 | <code><a href="#@cdktn/provider-archive.provider.ArchiveProvider.isTerraformElement">IsTerraformElement</a></code> | *No description.* |
 | <code><a href="#@cdktn/provider-archive.provider.ArchiveProvider.isTerraformProvider">IsTerraformProvider</a></code> | *No description.* |
-| <code><a href="#@cdktn/provider-archive.provider.ArchiveProvider.generateConfigForImport">GenerateConfigForImport</a></code> | Generates CDKTF code for importing a ArchiveProvider resource upon running "cdktf plan <stack-name>". |
+| <code><a href="#@cdktn/provider-archive.provider.ArchiveProvider.generateConfigForImport">GenerateConfigForImport</a></code> | Generates CDKTN code for importing a ArchiveProvider resource upon running "cdktn plan <stack-name>". |
 
 ---
 
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktn/provider-archive.provider.ArchiveProvider.isConstruct"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-archive-go/archive/v11/provider"
+import "github.com/cdktn-io/cdktn-provider-archive-go/archive/v12/provider"
 
 provider.ArchiveProvider_IsConstruct(x interface{}) *bool
 ```
@@ -183,7 +183,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktn/provider-archive.provider.ArchiveProvider.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-archive-go/archive/v11/provider"
+import "github.com/cdktn-io/cdktn-provider-archive-go/archive/v12/provider"
 
 provider.ArchiveProvider_IsTerraformElement(x interface{}) *bool
 ```
@@ -197,7 +197,7 @@ provider.ArchiveProvider_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformProvider` <a name="IsTerraformProvider" id="@cdktn/provider-archive.provider.ArchiveProvider.isTerraformProvider"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-archive-go/archive/v11/provider"
+import "github.com/cdktn-io/cdktn-provider-archive-go/archive/v12/provider"
 
 provider.ArchiveProvider_IsTerraformProvider(x interface{}) *bool
 ```
@@ -211,12 +211,12 @@ provider.ArchiveProvider_IsTerraformProvider(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktn/provider-archive.provider.ArchiveProvider.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-archive-go/archive/v11/provider"
+import "github.com/cdktn-io/cdktn-provider-archive-go/archive/v12/provider"
 
 provider.ArchiveProvider_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
 
-Generates CDKTF code for importing a ArchiveProvider resource upon running "cdktf plan <stack-name>".
+Generates CDKTN code for importing a ArchiveProvider resource upon running "cdktn plan <stack-name>".
 
 ###### `scope`<sup>Required</sup> <a name="scope" id="@cdktn/provider-archive.provider.ArchiveProvider.generateConfigForImport.parameter.scope"></a>
 
@@ -246,7 +246,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/archive/2.
 
 ###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktn/provider-archive.provider.ArchiveProvider.generateConfigForImport.parameter.provider"></a>
 
-- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider
+- *Type:* github.com/open-constructs/cdk-terrain-go/cdktn.TerraformProvider
 
 ? Optional instance of the provider where the ArchiveProvider to import is found.
 
@@ -257,12 +257,12 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/archive/2.
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktn/provider-archive.provider.ArchiveProvider.property.node">Node</a></code> | <code>github.com/aws/constructs-go/constructs/v10.Node</code> | The tree node. |
-| <code><a href="#@cdktn/provider-archive.provider.ArchiveProvider.property.cdktfStack">CdktfStack</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformStack</code> | *No description.* |
+| <code><a href="#@cdktn/provider-archive.provider.ArchiveProvider.property.cdktfStack">CdktfStack</a></code> | <code>github.com/open-constructs/cdk-terrain-go/cdktn.TerraformStack</code> | *No description.* |
 | <code><a href="#@cdktn/provider-archive.provider.ArchiveProvider.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktn/provider-archive.provider.ArchiveProvider.property.friendlyUniqueId">FriendlyUniqueId</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktn/provider-archive.provider.ArchiveProvider.property.metaAttributes">MetaAttributes</a></code> | <code>*map[string]interface{}</code> | *No description.* |
 | <code><a href="#@cdktn/provider-archive.provider.ArchiveProvider.property.terraformResourceType">TerraformResourceType</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktn/provider-archive.provider.ArchiveProvider.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
+| <code><a href="#@cdktn/provider-archive.provider.ArchiveProvider.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>github.com/open-constructs/cdk-terrain-go/cdktn.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktn/provider-archive.provider.ArchiveProvider.property.terraformProviderSource">TerraformProviderSource</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktn/provider-archive.provider.ArchiveProvider.property.alias">Alias</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktn/provider-archive.provider.ArchiveProvider.property.aliasInput">AliasInput</a></code> | <code>*string</code> | *No description.* |
@@ -287,7 +287,7 @@ The tree node.
 func CdktfStack() TerraformStack
 ```
 
-- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.TerraformStack
+- *Type:* github.com/open-constructs/cdk-terrain-go/cdktn.TerraformStack
 
 ---
 
@@ -337,7 +337,7 @@ func TerraformResourceType() *string
 func TerraformGeneratorMetadata() TerraformProviderGeneratorMetadata
 ```
 
-- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProviderGeneratorMetadata
+- *Type:* github.com/open-constructs/cdk-terrain-go/cdktn.TerraformProviderGeneratorMetadata
 
 ---
 
@@ -396,7 +396,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktn/provider-archive.provider.ArchiveProviderConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktn-io/cdktn-provider-archive-go/archive/v11/provider"
+import "github.com/cdktn-io/cdktn-provider-archive-go/archive/v12/provider"
 
 &provider.ArchiveProviderConfig {
 	Alias: *string,
