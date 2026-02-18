@@ -7,17 +7,17 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import * as cdktf from 'cdktf';
+import * as cdktn from 'cdktn';
 
 // Configuration
 
-export interface FileConfig extends cdktf.TerraformMetaArguments {
+export interface FileConfig extends cdktn.TerraformMetaArguments {
   /**
   * Boolean flag indicating whether symbolically linked directories should be excluded during the creation of the archive. Defaults to `false`.
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.7.1/docs/resources/file#exclude_symlink_directories File#exclude_symlink_directories}
   */
-  readonly excludeSymlinkDirectories?: boolean | cdktf.IResolvable;
+  readonly excludeSymlinkDirectories?: boolean | cdktn.IResolvable;
   /**
   * Specify files/directories to ignore when reading the `source_dir`. Supports glob file matching patterns including doublestar/globstar (`**`) patterns.
   *
@@ -71,7 +71,7 @@ export interface FileConfig extends cdktf.TerraformMetaArguments {
   *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.7.1/docs/resources/file#source File#source}
   */
-  readonly source?: FileSource[] | cdktf.IResolvable;
+  readonly source?: FileSource[] | cdktn.IResolvable;
 }
 export interface FileSource {
   /**
@@ -88,32 +88,32 @@ export interface FileSource {
   readonly filename: string;
 }
 
-export function fileSourceToTerraform(struct?: FileSource | cdktf.IResolvable): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
+export function fileSourceToTerraform(struct?: FileSource | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    content: cdktf.stringToTerraform(struct!.content),
-    filename: cdktf.stringToTerraform(struct!.filename),
+    content: cdktn.stringToTerraform(struct!.content),
+    filename: cdktn.stringToTerraform(struct!.filename),
   }
 }
 
 
-export function fileSourceToHclTerraform(struct?: FileSource | cdktf.IResolvable): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
+export function fileSourceToHclTerraform(struct?: FileSource | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   const attrs = {
     content: {
-      value: cdktf.stringToHclTerraform(struct!.content),
+      value: cdktn.stringToHclTerraform(struct!.content),
       isBlock: false,
       type: "simple",
       storageClassType: "string",
     },
     filename: {
-      value: cdktf.stringToHclTerraform(struct!.filename),
+      value: cdktn.stringToHclTerraform(struct!.filename),
       isBlock: false,
       type: "simple",
       storageClassType: "string",
@@ -124,9 +124,9 @@ export function fileSourceToHclTerraform(struct?: FileSource | cdktf.IResolvable
   return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
-export class FileSourceOutputReference extends cdktf.ComplexObject {
+export class FileSourceOutputReference extends cdktn.ComplexObject {
   private isEmptyObject = false;
-  private resolvableValue?: cdktf.IResolvable;
+  private resolvableValue?: cdktn.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -134,11 +134,11 @@ export class FileSourceOutputReference extends cdktf.ComplexObject {
   * @param complexObjectIndex the index of this item in the list
   * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
     super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
   }
 
-  public get internalValue(): FileSource | cdktf.IResolvable | undefined {
+  public get internalValue(): FileSource | cdktn.IResolvable | undefined {
     if (this.resolvableValue) {
       return this.resolvableValue;
     }
@@ -155,14 +155,14 @@ export class FileSourceOutputReference extends cdktf.ComplexObject {
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: FileSource | cdktf.IResolvable | undefined) {
+  public set internalValue(value: FileSource | cdktn.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
       this.resolvableValue = undefined;
       this._content = undefined;
       this._filename = undefined;
     }
-    else if (cdktf.Tokenization.isResolvable(value)) {
+    else if (cdktn.Tokenization.isResolvable(value)) {
       this.isEmptyObject = false;
       this.resolvableValue = value;
     }
@@ -201,15 +201,15 @@ export class FileSourceOutputReference extends cdktf.ComplexObject {
   }
 }
 
-export class FileSourceList extends cdktf.ComplexList {
-  public internalValue? : FileSource[] | cdktf.IResolvable
+export class FileSourceList extends cdktn.ComplexList {
+  public internalValue? : FileSource[] | cdktn.IResolvable
 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
   */
-  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+  constructor(protected terraformResource: cdktn.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
     super(terraformResource, terraformAttribute, wrapsSet)
   }
 
@@ -224,7 +224,7 @@ export class FileSourceList extends cdktf.ComplexList {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/archive/2.7.1/docs/resources/file archive_file}
 */
-export class File extends cdktf.TerraformResource {
+export class File extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -235,14 +235,14 @@ export class File extends cdktf.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTF code for importing a File resource upon running "cdktf plan <stack-name>"
+  * Generates CDKTN code for importing a File resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the File to import
   * @param importFromId The id of the existing File that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/archive/2.7.1/docs/resources/file#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the File to import is found
   */
-  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
-        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "archive_file", importId: importFromId, provider });
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "archive_file", importId: importFromId, provider });
       }
 
   // ===========
@@ -289,11 +289,11 @@ export class File extends cdktf.TerraformResource {
   // ==========
 
   // exclude_symlink_directories - computed: false, optional: true, required: false
-  private _excludeSymlinkDirectories?: boolean | cdktf.IResolvable; 
+  private _excludeSymlinkDirectories?: boolean | cdktn.IResolvable; 
   public get excludeSymlinkDirectories() {
     return this.getBooleanAttribute('exclude_symlink_directories');
   }
-  public set excludeSymlinkDirectories(value: boolean | cdktf.IResolvable) {
+  public set excludeSymlinkDirectories(value: boolean | cdktn.IResolvable) {
     this._excludeSymlinkDirectories = value;
   }
   public resetExcludeSymlinkDirectories() {
@@ -307,7 +307,7 @@ export class File extends cdktf.TerraformResource {
   // excludes - computed: false, optional: true, required: false
   private _excludes?: string[]; 
   public get excludes() {
-    return cdktf.Fn.tolist(this.getListAttribute('excludes'));
+    return cdktn.Fn.tolist(this.getListAttribute('excludes'));
   }
   public set excludes(value: string[]) {
     this._excludes = value;
@@ -471,7 +471,7 @@ export class File extends cdktf.TerraformResource {
   public get source() {
     return this._source;
   }
-  public putSource(value: FileSource[] | cdktf.IResolvable) {
+  public putSource(value: FileSource[] | cdktn.IResolvable) {
     this._source.internalValue = value;
   }
   public resetSource() {
@@ -488,77 +488,77 @@ export class File extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      exclude_symlink_directories: cdktf.booleanToTerraform(this._excludeSymlinkDirectories),
-      excludes: cdktf.listMapper(cdktf.stringToTerraform, false)(this._excludes),
-      output_file_mode: cdktf.stringToTerraform(this._outputFileMode),
-      output_path: cdktf.stringToTerraform(this._outputPath),
-      source_content: cdktf.stringToTerraform(this._sourceContent),
-      source_content_filename: cdktf.stringToTerraform(this._sourceContentFilename),
-      source_dir: cdktf.stringToTerraform(this._sourceDir),
-      source_file: cdktf.stringToTerraform(this._sourceFile),
-      type: cdktf.stringToTerraform(this._type),
-      source: cdktf.listMapper(fileSourceToTerraform, true)(this._source.internalValue),
+      exclude_symlink_directories: cdktn.booleanToTerraform(this._excludeSymlinkDirectories),
+      excludes: cdktn.listMapper(cdktn.stringToTerraform, false)(this._excludes),
+      output_file_mode: cdktn.stringToTerraform(this._outputFileMode),
+      output_path: cdktn.stringToTerraform(this._outputPath),
+      source_content: cdktn.stringToTerraform(this._sourceContent),
+      source_content_filename: cdktn.stringToTerraform(this._sourceContentFilename),
+      source_dir: cdktn.stringToTerraform(this._sourceDir),
+      source_file: cdktn.stringToTerraform(this._sourceFile),
+      type: cdktn.stringToTerraform(this._type),
+      source: cdktn.listMapper(fileSourceToTerraform, true)(this._source.internalValue),
     };
   }
 
   protected synthesizeHclAttributes(): { [name: string]: any } {
     const attrs = {
       exclude_symlink_directories: {
-        value: cdktf.booleanToHclTerraform(this._excludeSymlinkDirectories),
+        value: cdktn.booleanToHclTerraform(this._excludeSymlinkDirectories),
         isBlock: false,
         type: "simple",
         storageClassType: "boolean",
       },
       excludes: {
-        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._excludes),
+        value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(this._excludes),
         isBlock: false,
         type: "set",
         storageClassType: "stringList",
       },
       output_file_mode: {
-        value: cdktf.stringToHclTerraform(this._outputFileMode),
+        value: cdktn.stringToHclTerraform(this._outputFileMode),
         isBlock: false,
         type: "simple",
         storageClassType: "string",
       },
       output_path: {
-        value: cdktf.stringToHclTerraform(this._outputPath),
+        value: cdktn.stringToHclTerraform(this._outputPath),
         isBlock: false,
         type: "simple",
         storageClassType: "string",
       },
       source_content: {
-        value: cdktf.stringToHclTerraform(this._sourceContent),
+        value: cdktn.stringToHclTerraform(this._sourceContent),
         isBlock: false,
         type: "simple",
         storageClassType: "string",
       },
       source_content_filename: {
-        value: cdktf.stringToHclTerraform(this._sourceContentFilename),
+        value: cdktn.stringToHclTerraform(this._sourceContentFilename),
         isBlock: false,
         type: "simple",
         storageClassType: "string",
       },
       source_dir: {
-        value: cdktf.stringToHclTerraform(this._sourceDir),
+        value: cdktn.stringToHclTerraform(this._sourceDir),
         isBlock: false,
         type: "simple",
         storageClassType: "string",
       },
       source_file: {
-        value: cdktf.stringToHclTerraform(this._sourceFile),
+        value: cdktn.stringToHclTerraform(this._sourceFile),
         isBlock: false,
         type: "simple",
         storageClassType: "string",
       },
       type: {
-        value: cdktf.stringToHclTerraform(this._type),
+        value: cdktn.stringToHclTerraform(this._type),
         isBlock: false,
         type: "simple",
         storageClassType: "string",
       },
       source: {
-        value: cdktf.listMapperHcl(fileSourceToHclTerraform, true)(this._source.internalValue),
+        value: cdktn.listMapperHcl(fileSourceToHclTerraform, true)(this._source.internalValue),
         isBlock: true,
         type: "set",
         storageClassType: "FileSourceList",
