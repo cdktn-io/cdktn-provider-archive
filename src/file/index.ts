@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/archive/2.7.1/docs/resources/file
+// https://registry.terraform.io/providers/hashicorp/archive/2.8.0/docs/resources/file
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,61 +15,61 @@ export interface FileConfig extends cdktn.TerraformMetaArguments {
   /**
   * Boolean flag indicating whether symbolically linked directories should be excluded during the creation of the archive. Defaults to `false`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.7.1/docs/resources/file#exclude_symlink_directories File#exclude_symlink_directories}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.8.0/docs/resources/file#exclude_symlink_directories File#exclude_symlink_directories}
   */
   readonly excludeSymlinkDirectories?: boolean | cdktn.IResolvable;
   /**
   * Specify files/directories to ignore when reading the `source_dir`. Supports glob file matching patterns including doublestar/globstar (`**`) patterns.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.7.1/docs/resources/file#excludes File#excludes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.8.0/docs/resources/file#excludes File#excludes}
   */
   readonly excludes?: string[];
   /**
   * String that specifies the octal file mode for all archived files. For example: `"0666"`. Setting this will ensure that cross platform usage of this module will not vary the modes of archived files (and ultimately checksums) resulting in more deterministic behavior.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.7.1/docs/resources/file#output_file_mode File#output_file_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.8.0/docs/resources/file#output_file_mode File#output_file_mode}
   */
   readonly outputFileMode?: string;
   /**
   * The output of the archive file.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.7.1/docs/resources/file#output_path File#output_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.8.0/docs/resources/file#output_path File#output_path}
   */
   readonly outputPath: string;
   /**
   * Add only this content to the archive with `source_content_filename` as the filename. One and only one of `source`, `source_content_filename` (with `source_content`), `source_file`, or `source_dir` must be specified.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.7.1/docs/resources/file#source_content File#source_content}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.8.0/docs/resources/file#source_content File#source_content}
   */
   readonly sourceContent?: string;
   /**
   * Set this as the filename when using `source_content`. One and only one of `source`, `source_content_filename` (with `source_content`), `source_file`, or `source_dir` must be specified.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.7.1/docs/resources/file#source_content_filename File#source_content_filename}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.8.0/docs/resources/file#source_content_filename File#source_content_filename}
   */
   readonly sourceContentFilename?: string;
   /**
   * Package entire contents of this directory into the archive. One and only one of `source`, `source_content_filename` (with `source_content`), `source_file`, or `source_dir` must be specified.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.7.1/docs/resources/file#source_dir File#source_dir}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.8.0/docs/resources/file#source_dir File#source_dir}
   */
   readonly sourceDir?: string;
   /**
   * Package this file into the archive. One and only one of `source`, `source_content_filename` (with `source_content`), `source_file`, or `source_dir` must be specified.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.7.1/docs/resources/file#source_file File#source_file}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.8.0/docs/resources/file#source_file File#source_file}
   */
   readonly sourceFile?: string;
   /**
   * The type of archive to generate. NOTE: `zip` and `tar.gz` is supported.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.7.1/docs/resources/file#type File#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.8.0/docs/resources/file#type File#type}
   */
   readonly type: string;
   /**
   * source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.7.1/docs/resources/file#source File#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.8.0/docs/resources/file#source File#source}
   */
   readonly source?: FileSource[] | cdktn.IResolvable;
 }
@@ -77,13 +77,13 @@ export interface FileSource {
   /**
   * Add this content to the archive with `filename` as the filename.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.7.1/docs/resources/file#content File#content}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.8.0/docs/resources/file#content File#content}
   */
   readonly content: string;
   /**
   * Set this as the filename when declaring a `source`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.7.1/docs/resources/file#filename File#filename}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.8.0/docs/resources/file#filename File#filename}
   */
   readonly filename: string;
 }
@@ -222,7 +222,7 @@ export class FileSourceList extends cdktn.ComplexList {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/archive/2.7.1/docs/resources/file archive_file}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/archive/2.8.0/docs/resources/file archive_file}
 */
 export class File extends cdktn.TerraformResource {
 
@@ -238,7 +238,7 @@ export class File extends cdktn.TerraformResource {
   * Generates CDKTN code for importing a File resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the File to import
-  * @param importFromId The id of the existing File that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/archive/2.7.1/docs/resources/file#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing File that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/archive/2.8.0/docs/resources/file#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the File to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
@@ -250,7 +250,7 @@ export class File extends cdktn.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/archive/2.7.1/docs/resources/file archive_file} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/archive/2.8.0/docs/resources/file archive_file} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -261,7 +261,7 @@ export class File extends cdktn.TerraformResource {
       terraformResourceType: 'archive_file',
       terraformGeneratorMetadata: {
         providerName: 'archive',
-        providerVersion: '2.7.1',
+        providerVersion: '2.8.0',
         providerVersionConstraint: '~> 2.2'
       },
       provider: config.provider,
